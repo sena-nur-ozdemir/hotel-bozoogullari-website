@@ -1,0 +1,727 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-cream: #f5f1ed;
+  --color-dark-green: #40678c;
+  --color-terracotta: #003366;
+  --color-light-beige: #e8e3dc;
+  --color-dark-text: #2c2c2c;
+  --color-light-text: #6b6b6b;
+  --color-white: #ffffff;
+  --color-accent-gold: #b8956a;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-dark-text);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--color-light-text);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: var(--transition);
+}
+
+/* Scroll sonrası navbar arka plan */
+.navbar.scrolled {
+  background: rgba(245, 241, 237, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Sol taraftaki logo (Hotel Bozooğulları) */
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #003366 !important;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+/* Navbar link grubu */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+/* Genel link stili */
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  transition: var(--transition);
+  position: relative;
+}
+
+/* Sayfa başında (scroll olmadan) link renkleri beyaz */
+.navbar:not(.scrolled) .nav-links a {
+  color: #ffffff;
+  font-size: 1.05rem;
+  /* biraz büyüt */
+  font-weight: 500;
+  /* daha belirgin */
+}
+
+/* Scroll sonrası link renkleri */
+.navbar.scrolled .nav-links a {
+  color: var(--color-dark-text);
+}
+
+/* Hover efekti */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-terracotta);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hover renk değişimi */
+.navbar:not(.scrolled) .nav-links a:hover,
+.navbar.scrolled .nav-links a:hover {
+  color: var(--color-terracotta);
+}
+
+/* --- REZERVASYON LINKİ --- */
+.nav-links a.reservation-link {
+  color: #ffffff !important;
+}
+
+.nav-links a.reservation-link:hover {
+  color: #ffffff !important;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 2px;
+  background: var(--color-dark-green);
+  transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-white);
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h2 {
+  color: #ffffff;
+  /* zaten beyaz */
+  font-weight: 700;
+  /* kalınlaştırıldı */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  /* yazıyı öne çıkarır */
+}
+
+.hero p {
+  color: #ffffff;
+  font-weight: 500;
+  /* paragraf biraz daha belirgin */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  /* biraz büyüttük */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: var(--color-terracotta);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+  border: 2px solid var(--color-terracotta);
+  animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+.cta-button:hover {
+  background: transparent;
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section {
+  padding: 8rem 3rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title h2 {
+  color: var(--color-dark-green);
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* About section başlığı */
+.about-text h2 {
+  color: #40678c
+    /* istediğin renk, navbar rengiyle aynı değil */
+}
+
+.about-text h3 {
+  color: var(--color-dark-green);
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-white);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-terracotta);
+}
+
+.feature-card h3 {
+  color: var(--color-dark-green);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Sadece Galeriyi Görüntüle butonu */
+.gallery-view-button {
+  background-color: #003366;
+  /* normal koyu mavi */
+  color: #ffffff;
+  /* normal yazı beyaz */
+  padding: 1rem 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+/* Hover durumunda */
+.gallery-view-button:hover {
+  background-color: #ffffff !important;
+  /* hover açık mavi */
+  color: #003366 !important;
+  /* hover yazı koyu */
+  border-color: #40678c !important;
+  transform: translateY(-2px);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 58, 46, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay span {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-family: var(--font-serif);
+}
+
+/* Contact Form */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.contact-info h3 {
+  color: var(--color-dark-green);
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+
+.contact-item h4 {
+  color: var(--color-dark-green);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-text);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--color-light-beige);
+  background: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--color-dark-green);
+  color: var(--color-white);
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-button:hover {
+  background: var(--color-terracotta);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background: var(--color-terracotta);
+  color: var(--color-white);
+  padding: 4rem 3rem 2rem;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+}
+
+.footer-section a:hover {
+  color: var(--color-dark-green);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: var(--color-white);
+}
+
+.social-links a:hover {
+  border-color: var(--color-dark-green);
+  background: var(--color-dark-green);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- REZERVASYON BUTONU (FOOTER ÜSTÜ) ---------- */
+.hero+.section .cta-button,
+.reservation-section .cta-button {
+  background: var(--color-terracotta);
+  /* koyu renk */
+  color: var(--color-cream);
+  /* açık renk */
+  border: 2px solid var(--color-terracotta);
+  transition: var(--transition);
+}
+
+.hero+.section .cta-button:hover,
+.reservation-section .cta-button:hover {
+  background: var(--color-cream);
+  /* hoverda açık renk */
+  color: var(--color-terracotta);
+  /* hoverda yazı koyu */
+  transform: translateY(-2px);
+}
+
+/* ---------- REZERVASYON SECTION (KOYU ARKA PLAN, AÇIK BUTON) ---------- */
+/* ---------- REZERVASYON SECTION (KOYU ARKA PLAN, AÇIK BUTON) ---------- */
+#rezervasyon {
+  background-color: #003366;
+  /* koyu mavi arka plan */
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+#rezervasyon h2,
+#rezervasyon p {
+  color: #ffffff;
+  /* yazılar beyaz */
+  margin-bottom: 1.5rem;
+}
+
+/* Rezervasyon butonları */
+#rezervasyon .cta-button {
+  background-color: #40678c;
+  /* açık mavi */
+  color: #ffffff;
+  /* yazı beyaz */
+  border: 2px solid #40678c;
+  /* border açık mavi */
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+#rezervasyon .cta-button:hover {
+  background-color: #ffffff;
+  /* hover arka plan beyaz */
+  color: #003366;
+  /* hover yazı koyu mavi */
+  border-color: #40678c;
+  /* hover border açık mavi */
+  transform: translateY(-2px);
+}
+
+/* === FOOTER DÜZENLEMELERİ === */
+/* Sosyal medya ikonları belirgin */
+.footer .social-links a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  /* Beyaz ve net görünür */
+  margin-right: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  opacity: 1;
+  /* Her zaman görünür */
+}
+
+/* Hover efekti: sadece büyüsün, görünürlüğü azalmadan */
+.footer .social-links a:hover {
+  transform: scale(1.2);
+  color: #ffb347;
+  /* Yumuşak turuncu ışıltı */
+  opacity: 1;
+}
+
+/* İletişim kısmındaki telefon ve e-posta simgeleri */
+.footer #iletisim p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.footer #iletisim p:first-of-type::before {
+  content: "📍 ";
+  color: #ffffff;
+}
+
+.footer #iletisim p:nth-of-type(2)::before {
+  content: "📞 ";
+  color: #ff8800;
+  /* Turuncu ton */
+}
+
+.footer #iletisim p:nth-of-type(3)::before {
+  content: "✉️ ";
+  color: #ff8800;
+  /* Turuncu ton */
+}
+
+/* Adres satırında renk değişmesin */
+.footer #iletisim p:first-of-type {
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 400px;
+    background: var(--color-cream);
+    flex-direction: column;
+    padding: 5rem 2rem;
+    gap: 2rem;
+    transition: var(--transition);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .about-content,
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+  }
+}

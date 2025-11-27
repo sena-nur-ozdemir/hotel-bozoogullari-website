@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Hotel Bozooğulları</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/galeri.css">
+</head>
+
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" class="logo">HOTEL BOZOOĞULLARI</a>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="index.html#hakkimizda">Hakkımızda</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="index.html#rezervasyon" class="cta-button"
+                    style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">Rezervasyon</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" style="height: 50vh;">
+        <img src="images/otelgüncelfoto.jpeg" alt="Galeri" class="hero-image">
+        <div class="hero-content">
+            <h1 style="font-size: clamp(2.5rem, 6vw, 5rem);">Galeri</h1>
+            <p>Otelimizden görsel bir yolculuk</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="odalar">Odalar</button>
+            <button class="filter-btn" data-filter="restoran">Restoran</button>
+            <button class="filter-btn" data-filter="genel">Genel Alanlar</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="odalar">
+                <img src="images/standartoda.webp" alt="Standart Oda">
+                <div class="gallery-overlay">
+                    <span>Standart Oda</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="odalar">
+                <img src="images/üçkişilikoda.webp" alt="Üç Kişilik Oda">
+                <div class="gallery-overlay">
+                    <span>Üç Kişilik Oda</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="odalar">
+                <img src="images/balkonluaileodası.webp" alt="Balkonlu Aile Odası">
+                <div class="gallery-overlay">
+                    <span>Balkonlu Aile Odası</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="odalar">
+                <img src="images/süit oda.webp" alt="Suit Oda">
+                <div class="gallery-overlay">
+                    <span>Suit Oda</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="restoran">
+                <img src="images/restoran.jpg" alt="Ana Restoran">
+                <div class="gallery-overlay">
+                    <span>Ana Restoran</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="restoran">
+                <img src="images/grupyemeği.jpg" alt="Grup Yemekleri">
+                <div class="gallery-overlay">
+                    <span>Grup Yemekleri</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="restoran">
+                <img src="images/starbucks.webp" alt="Cafe">
+                <div class="gallery-overlay">
+                    <span>Cafe-Starbucks & Quuba</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="restoran">
+                <img src="images/starbucksfotosu.jpg" alt="Cafe">
+                <div class="gallery-overlay">
+                    <span>Cafe-Starbucks & Quuba</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="genel">
+                <img src="images/resepsiyon.webp" alt="Resepsiyon">
+                <div class="gallery-overlay">
+                    <span>Resepsiyon</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="genel">
+                <img src="images/lobioturmaalanı.webp" alt="Lobi">
+                <div class="gallery-overlay">
+                    <span>Lobi Oturma Alanı</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="genel">
+                <img src="images/toplantısalonu.webp" alt="Toplantı Salonu">
+                <div class="gallery-overlay">
+                    <span>Toplantı Salonu</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+        <img src="/placeholder.svg" alt="" id="lightboxImage">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hotel Bozooğulları</h3>
+                <p>Konfor ve Lüksü Batman'da Bir Araya Getiriyoruz</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Bağlantılar</h3>
+                <a href="index.html">Ana Sayfa</a>
+                <a href="index.html#hakkimizda">Hakkımızda</a>
+                <a href="galeri.html">Galeri</a>
+            </div>
+            <div class="footer-section">
+                <h3 id="iletisim">İletişim</h3>
+                <p>📍 Gap, Turgut Özal Blv.<br>Batman, Merkez</p>
+                <p>📞 0488 215 04 44</p>
+                <p>✉️ info@hotelbozoogullari.com.tr</p>
+            </div>
+            <div class="footer-section">
+                <h3>Çalışma Saatleri</h3>
+                <p>Resepsiyon: 7/24</p>
+                <p>Hafta içi-Restoran:<br>07:00 - 10:00</p>
+                <p>Hafta sonu-Restoran:<br>07:00 - 10:30</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hotel Bozooğulları. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/galeri.js"></script>
+</body>
+
+</html>
