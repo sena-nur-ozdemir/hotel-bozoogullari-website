@@ -7,7 +7,7 @@ Web sitesi; modern arayüz tasarımı, kullanıcı dostu deneyim (UX) ve perform
 
 ## ✨ Öne Çıkan Özellikler
 
--Modern Frontend Uygulamaları
+**Modern Frontend Uygulamaları**
 
 ## Dinamik Galeri Filtreleme:
  - Odalar / Restoran / Genel Alanlar kategorilerine göre anında filtreleme yapan tamamen Vanilla JavaScript ile geliştirilmiş galeri sistemi.
@@ -46,7 +46,7 @@ Projeyi yerel bilgisayarınızda çalıştırmak için izlenecek adımlar:
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone [GITHUB REPO URL'NİZ BURAYA GELECEK]
+    git clone [https://github.com/sena-nur-ozdemir/hotel-bozoogullari-website]
     ```
 2.  **Klasöre Girin:**
     ```bash
