@@ -2,7 +2,7 @@
 Bu proje, Hotel Bozooğulları için profesyonel bir kurumsal web sitesi geliştirme çalışmasıdır.
 Proje, otel sahiplerinden geri dönüş beklenmesi nedeniyle henüz canlıya alınmamış olsa da, gerçek bir müşteriye yönelik olarak hazırlanmıştır ve tamamen kullanıma hazır durumdadır.
 
-Web sitesi; modern arayüz tasarımı, kullanıcı dostu deneyim (UX) ve performans odaklı Frontend teknikleri ile sıfırdan (from scratch) geliştirilmiştir.
+## Web sitesi; modern arayüz tasarımı, kullanıcı dostu deneyim (UX) ve performans odaklı Frontend teknikleri ile sıfırdan (from scratch) geliştirilmiştir.
 ---
 
 ## ✨ Öne Çıkan Özellikler
