@@ -1,11 +1,22 @@
 # 🏨 Hotel Bozooğulları - Kurumsal Web Sitesi Geliştirme
+Bu proje, Hotel Bozooğulları için profesyonel bir kurumsal web sitesi geliştirme çalışmasıdır.
+Proje, otel sahiplerinden geri dönüş beklenmesi nedeniyle henüz canlıya alınmamış olsa da, gerçek bir müşteriye yönelik olarak hazırlanmıştır ve tamamen kullanıma hazır durumdadır.
 
-Bu proje, bir konaklama tesisinin ihtiyaç duyduğu modern, kullanıcı odaklı ve tam donanımlı kurumsal web sitesi tasarımını ve Front-End geliştirmesini sergilemektedir. Proje, güncel web standartlarına uygun olarak **saf HTML5, CSS3 ve Vanilla JavaScript** ile sıfırdan (From Scratch) inşa edilmiştir.
+Web sitesi; modern arayüz tasarımı, kullanıcı dostu deneyim (UX) ve performans odaklı Frontend teknikleri ile sıfırdan (from scratch) geliştirilmiştir.
 ---
 
-## ✨ Ana Özellikler ve Teknik Çözümler
+## ✨ Öne Çıkan Özellikler
 
-Bu projenin en güçlü yanı, sadece güzel görünmekle kalmayıp aynı zamanda modern Front-End teknikleri kullanılarak geliştirilmiş olmasıdır. Bu, mühendislik becerilerimi kanıtlar düzeydedir.
+-Modern Frontend Uygulamaları
+
+## Dinamik Galeri Filtreleme:
+ - Odalar / Restoran / Genel Alanlar kategorilerine göre anında filtreleme yapan tamamen Vanilla JavaScript ile geliştirilmiş galeri sistemi.
+
+Intersection Observer Animasyonları:
+Scroll ile ekrana giren her öğede performanslı animasyon tetikleme.
+
+Akıllı Sticky Header:
+Sayfa kaydırıldıkça arka planı şeffaftan beyaza geçerek kullanıcı deneyimini artıran dinamik menü.
 
 ### 1. Performans ve Akıcılık Odaklı Uygulamalar
 
