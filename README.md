@@ -15,6 +15,8 @@ Proje, otel sahiplerinden geri dönüş beklenmesi nedeniyle henüz canlıya al�
 * **Tamamen Duyarlı Tasarım (Responsive Design):** Site, tüm mobil, tablet ve masaüstü ekranlarında kusursuz bir görüntü ve kullanılabilirlik sunmak üzere detaylı `@media` sorguları ile düzenlenmiştir.
 * **Kurumsal Kimlik ve Renk Paleti:** Otelin lüks ve davetkar imajını destekleyen, temiz ve profesyonel bir renk paleti kullanılmıştır.
 
+---
+
 ## 🛠️ Kullanılan Teknolojiler
 
 | Kategori | Teknolojiler | Kullanım Amacı |
@@ -43,3 +45,15 @@ Projeyi yerel bilgisayarınızda çalıştırmak için izlenecek adımlar:
     * *(Öneri: VS Code kullanıyorsanız, `index.html` dosyasını açtıktan sonra **Live Server** eklentisi ile çalıştırmanız en kolay yöntemdir.)*
 
 ---
+
+## Proje Fotoğrafları
+
+<img width="1917" height="911" alt="hotelfoto1" src="https://github.com/user-attachments/assets/c154f3a5-2d6f-4424-9bf8-c22e9f0d8b1b" />
+
+<img width="1918" height="918" alt="hotelfoto3" src="https://github.com/user-attachments/assets/b3c8521a-6bf4-4871-ad41-4a503ee3df0c" />
+
+<img width="1918" height="916" alt="hotelfoto4" src="https://github.com/user-attachments/assets/044289a4-46ce-43ed-a2de-c00a4f78aa59" />
+
+<img width="1918" height="910" alt="hotelfoto5" src="https://github.com/user-attachments/assets/a8c72a80-f13a-4014-8684-628b5966d2da" />
+
+<img width="1918" height="912" alt="hotelfoto6" src="https://github.com/user-attachments/assets/d103d78e-8125-416e-9a54-7a4783381ddc" />
